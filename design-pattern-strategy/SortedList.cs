@@ -7,11 +7,11 @@ namespace design_pattern_strategy
     public class SortedList
     {
         private readonly List<string> _list;
-        private readonly SortStrategy _sortStrategy;
+        public SortStrategy SortStrategy { get; private set; }
 
         public SortedList(SortStrategy sortStrategy)
         {
-            _sortStrategy = sortStrategy;
+            SortStrategy = sortStrategy;
             _list = new List<string>();
         }
 
@@ -22,9 +22,9 @@ namespace design_pattern_strategy
 
         public void Sort()
         {
-            _sortStrategy.Sort(_list);
+            SortStrategy.Sort(_list);
 
-            _list.ForEach(item => Console.WriteLine("${item}"));
+            _list.ForEach(item => Console.WriteLine($"{item}"));
         }
 
     }
