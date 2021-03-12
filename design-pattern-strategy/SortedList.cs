@@ -23,8 +23,6 @@ namespace design_pattern_strategy
         public void Sort()
         {
             SortStrategy.Sort(_list);
-
-            _list.ForEach(item => Console.WriteLine($"{item}"));
         }
 
     }

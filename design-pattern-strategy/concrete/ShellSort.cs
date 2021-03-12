@@ -9,6 +9,7 @@ namespace design_pattern_strategy.concrete
         public override void Sort(List<string> list)
         {
             Console.WriteLine("Shell Sort");
+            list.ForEach(item => Console.WriteLine($"{item}"));
         }
     }
 }
